@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>koi</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Orbitron&display=swap" rel="stylesheet">
+<style>
+	body{
+		background-color: #FF0051 ;
+		background-image: url('11.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-width: cover;
+	}
+	p{
+		text-align: center;
+		margin-top: 12%;
+		font-size:86px;
+		font-family: 'Fredoka One', cursive;
+
+	}
+	.ee{
+		padding-top: 8%;
+	}
+	.btn{
+        margin-left: 45%;
+        width :150px;
+        height:40px;
+        border-radius: 10px;
+        background: linear-gradient(30deg,#FF006C,
+        	#FF00E7,#6609EA);
+        border:0;
+       font-family: 'Fredoka One', cursive;
+       font-size: 25px;
+	}
+    .btn:hover{
+    	background: linear-gradient(30deg,#FF096A ,
+        	#F709DA ,#4F02FE );
+    }
+</style>
+<body>
+	<div class="ee">
+		<a href="rules.html"><button class="btn">BACK</button></a>
+</div>
+<div>
+<p id="y1"></p>
+</div>
+<script type="text/javascript">
+	var querystring = decodeURIComponent(window.location.search);
+	querystring = querystring.substring(1);
+	var queries = querystring.split("&");
+	document.getElementById("y1").innerHTML=queries[0] +"<br>";
+</script>
+</body>
+</html>

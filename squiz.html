@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quiz</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Orbitron&display=swap" rel="stylesheet">
+<style type="text/css">
+	body,html{
+		height:100%;
+		margin:0;
+	}
+	body{
+		background-image: url('10.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		overflow-y: auto;
+	}
+	div.header{
+		 background: linear-gradient(30deg,#FF006C,#FF00E7,#6609EA);
+       text-align: center;
+       font-size: 41px;
+       font-family: 'Fredoka One', cursive;
+       color:rgba(225,225,225,0.05);
+       -webkit-background-clip :text;
+	}
+	 .nxt1{
+		height:90px;
+		width :90px;
+		border-radius: 50px;
+		border-width: 1.5px;
+		background: transparent;
+		border-color: black;
+		font-family: 'Fredoka One', cursive;
+		font-size: 20px;
+		transition: 0.5s;
+		color:linear-gradient(30deg,#FF006C,#FF00E7,#6609EA);
+	}
+	.nxt1:hover{
+		 background: linear-gradient(30deg,#FF006C,#FF00E7,#6609EA);
+		 border:0;
+		 transition: 0.5s;
+		 color:#000;
+	}
+
+	.que{
+
+		text-align: justify;
+		align-items: center;
+		margin-top: 12%;
+		font-family: 'Fredoka One', cursive;
+		font-size: 25px;
+		padding : 15px;
+		padding-left: 38%;
+
+	}
+	.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  border-color: linear-gradient(30deg,#FF006C,#FF00E7,#6609EA);
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background: linear-gradient(30deg,#FF006C,#FF00E7,#6609EA);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border-color: linear-gradient(30deg,#FF006C,#FF00E7,#6609EA);
+	background: white;
+}
+
+.prev,.sub,.nxt{
+	margin-top: 2%;
+	margin-left: 2.5%;
+	font-family: 'Fredoka One', cursive;
+	font-size:16px;
+	height :30px;
+	width :92px;
+	border-radius: 5px;
+	border-color: black;
+	background: transparent;
+	position: relative;
+}
+.sub,.nxt{
+	margin-left: 38%;
+}
+
+.prev:hover,.sub:hover,.nxt:hover{
+	background: linear-gradient(30deg,#FF006C,#FF00E7,
+		#6609EA);
+	border:0;
+}
+</style>
+
+<body>
+	<div class="header">
+		<span id="timer"></span><br></br>
+		<button class="nxt1" onclick="present()">FINISH</button>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('timer').innerHTML =
+  003 + ":" + 00;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  if(m==0&&s==0)
+  {
+  	return present();
+  }
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec};
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+	</script>
+	<div class="container1">
+	<div class="que">
+What is the full form of COVID-19 ?<br>
+<label class="container">
+ Corona virus infectious disease
+<input type="radio" name="ans">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+	Its a novel strain name of family "CoV"
+	<input type="radio" name="ans" id="correct">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	It is just a name given since it is recognized in late 2019.
+	<input type="radio" name="ans">
+	<span class="checkmark"></span>
+</label>
+<label class="container"> None of these
+<input type="radio" name="ans">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+On what date "Janta Curfew" occured ?<br>
+<label class="container">
+ On 22 march from 9AM to 9PM.
+<input type="radio" name="ans1">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+   On 21 march from 9AM to 9PM.
+	<input type="radio" name="ans1">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	On 21 march from 7AM to 9PM.
+	<input type="radio" name="ans1">
+	<span class="checkmark"></span>
+</label>
+<label class="container"> None of these
+<input type="radio" name="ans1" id="correct1">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+Which is the origin of "corona" ?<br>
+<label class="container">
+ Beijing, China.
+<input type="radio" name="ans2">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+   Tokyo,Japan.
+	<input type="radio" name="ans2">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	Wuhan,China.
+	<input type="radio" name="ans2" id="correct2">
+	<span class="checkmark"></span>
+</label>
+<label class="container"> None of these
+<input type="radio" name="ans2">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+What measures are taken to avoid spread of corona ?<br>
+<label class="container">
+ Mass Sanitization
+<input type="radio" name="ans3">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+   Social distancing.
+	<input type="radio" name="ans3">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	Awareness among citizens.
+	<input type="radio" name="ans3">
+	<span class="checkmark"></span>
+</label>
+<label class="container"> All of these
+<input type="radio" name="ans3" id="correct3">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+What is the correct way of sneezing ?<br>
+<label class="container">
+ Using hankercheif.
+<input type="radio" name="ans4">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+   Using tissue.
+	<input type="radio" name="ans4">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	Bending and sneezing laid on the elbow.
+	<input type="radio" name="ans4">
+	<span class="checkmark"></span>
+</label>
+<label class="container"> All of these
+<input type="radio" name="ans4" id="correct4">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+Which of these are correct about section 144 ?<br>
+<label class="container">
+ Prohibition of mass gathering.
+<input type="radio" name="ans5">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+   It authorises to Executive Magistrate.
+	<input type="radio" name="ans5">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	It is included in the Criminal Procedure Code(Crpc).
+	<input type="radio" name="ans5">
+	<span class="checkmark"></span>
+</label>
+<label class="container"> All of these
+<input type="radio" name="ans5" id="correct5">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+ What is the main mode of transmission of corona ?<br>
+<label class="container">
+ Animals to Humans.
+<input type="radio" name="ans6">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+   Humans to Humans.
+	<input type="radio" name="ans6" id="correct6">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	Through surrounding with natural agents.
+	<input type="radio" name="ans6">
+	<span class="checkmark"></span>
+</label>
+<label class="container"> All of these
+<input type="radio" name="ans6">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+ Which of the following is not a symptom of coronavirus?<br>
+<label class="container">
+ High Fever.
+<input type="radio" name="ans7">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+   Breathing difficulty.
+	<input type="radio" name="ans7">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+	Head ache.
+	<input type="radio" name="ans7" id="correct7">
+	<span class="checkmark"></span>
+</label>
+<label class="container">Pneumonia.
+<input type="radio" name="ans7">
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+What is not the type of Cov disease recognized by WHO?<br>
+<label class="container">
+ MERS-Cov.
+<input type="radio" name="ans8">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+  SARS-Cov.
+	<input type="radio" name="ans8">
+	<span class="checkmark"></span>
+</label>
+<label class="container">
+  SEAS-Cov.
+	<input type="radio" name="ans8" id="correct8">
+	<span class="checkmark"></span>
+</label>
+<label class="container">None of these.
+<input type="radio" name="ans8" >
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="que">
+There is no vaccine for novel coronavirus.<br>
+<label class="container">
+ True.
+<input type="radio" name="ans9" id="correct9">
+<span class="checkmark"></span>
+</label>
+<label class="container">
+ False.
+	<input type="radio" name="ans9">
+	<span class="checkmark"></span>
+</label>
+</div>
+
+</div>
+<div class="btn">
+	<button class="prev" onclick="plusSlides(-1)">PREVIOUS</button>
+	<button class="sub" onclick="submit()">SUBMIT</button>
+	<button class="nxt" onclick="plusSlides(1)">NEXT</button>
+</div>
+<br>
+
+<script>
+	var c=0;
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("que");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+function submit(){
+
+	if(document.getElementById("correct").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct1").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct2").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct3").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct4").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct5").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct6").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct7").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct8").checked)
+	{
+		c=c+10;
+	}
+	else if(document.getElementById("correct9").checked)
+	{
+		c=c+10;
+	}
+}
+function present(){
+	var d=c;
+	var querystring = "?YOUR SCORE IS "+"<pre>"+d;
+	window.location.href = "toi.html" + querystring;
+}
+
+
+</script>
+</body>
+</html>
