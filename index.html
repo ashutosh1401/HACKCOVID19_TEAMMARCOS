@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>QVIDZZ..</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    .mySlides {
+      display: none;
+    }
+    .slide p {
+      font-size: 50px;
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-purple w3-card">
+        <a
+          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0)"
+          onclick="myFunction()"
+          title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large"
+          >HOME</a
+        >
+        <a
+          href="rules.html"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >START QUIZ</a
+        >
+        <a
+          href="#Tracker"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >TRACKER</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >CONTACT</a
+        >
+        <a
+          href="precautions.html"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >PRECAUTIONS</a
+        >
+        <p class="w3-bar-item w3-padding-extra-large w3-hide-small w3-right">
+          <b> QVIDZZ..</b>
+        </p>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top: 46px;"
+    >
+      <a
+        href="login.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >START QUIZ</a
+      >
+      <a
+        href="#Tracker"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >TRACKER</a
+      >
+      <a
+        href="#contact"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >CONTACT</a
+      >
+      <a
+        href="precautions.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >PRECAUTION</a
+      >
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width: 2000px; margin-top: 46px;">
+      <!-- Automatic Slideshow Images -->
+      <div class="mySlides w3-display-container w3-center">
+        <img src="slide1.png" style="width: 100%;" />
+        <div
+          class="w3-display-bottommiddle w3-container w3-text-black w3-padding-32 w3-hide-small slide"
+        >
+          <h3>FIRST CASE</h3>
+          <p>
+            <b>First case of coronavirus originated in city of wuhan,CHINA</b>
+          </p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="slide2.png" style="width: 100%;" />
+        <div
+          class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small slide"
+        >
+          <h3></h3>
+          <p>
+            <b
+              >Initiallly the outbreak was limited to china but soon it spread
+              all around the world</b
+            >
+          </p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="slide3.png" style="width: 100%;" />
+        <div
+          class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small slide"
+        >
+          <h3></h3>
+          <p>
+            <b
+              >Now the virus has infected over 400,000 people and claimed over
+              18,000 lives</b
+            >
+          </p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="wuhan.png" style="width: 100%;" />
+      </div>
+      <!-- The About Section -->
+      <div
+        class="w3-container w3-content w3-center w3-padding-64"
+        style="max-width: 800px;"
+        id="about"
+      >
+        <h2 class="w3-wide">About QVIDZZ..</h2>
+        <p class="w3-opacity"><i>Prevention Is Better Than Cure</i></p>
+        <p class="w3-justify">
+          This website's main objective is spread awareness about the pandemic
+          COVID-19 which had took many lives around the world. As the
+          misinformation or wrong information is circulating around the social
+          media this website tends to provide right information in the
+          intresting and interactive manner. It would also pave the way to
+          inform the kids about the threat and make them informed about the ways
+          of prevention of disease. So gear up for the intresting quiz. click on
+          start quiz to get through it.
+        </p>
+        <div class="w3-row w3-padding-32">
+          <p>Follow this links for accurate and correct information</p>
+          <div class="w3-third">
+            <p>WHO</p>
+            <a
+              href="https://www.who.int/health-topics/coronavirus#tab=tab_1"
+              target="_blank"
+              ><img
+                src="who.png"
+                class="w3-round w3-margin-bottom"
+                alt="Random Name"
+                style="width: 60%;"
+            /></a>
+          </div>
+          <div class="w3-third">
+            <p>HEALTH MINISTRY</p>
+            <a
+              href="https://webcache.googleusercontent.com/search?q=cache:https://mohfw.gov.in/"
+              target="_blank"
+              ><img
+                src="healthministry.png"
+                class="w3-round w3-margin-bottom"
+                alt="Random Name"
+                style="width: 60%;"
+            /></a>
+          </div>
+          <div class="w3-third">
+            <p>HELPLINE NUMBERS</p>
+            <a
+              href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwi0lJ3YvLXoAhWVfn0KHcFwBJIQFjAAegQIBxAB&url=https%3A%2F%2Fwww.mohfw.gov.in%2Fcoronvavirushelplinenumber.pdf&usg=AOvVaw2SU_4PX7IfmmEKICMdKPrh"
+              target="_blank"
+              ><img
+                src="phone.png"
+                class="w3-round"
+                alt="Random Name"
+                style="width: 55%;"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Tracker Section -->
+      <div class="w3-black" id="Tracker">
+        <div
+          class="w3-container w3-content w3-padding-50"
+          style="max-width: 800px;"
+        >
+          <h2 class="w3-wide w3-center">CURRENT CASES</h2>
+          <p class="w3-opacity w3-center"><i>Be safe</i></p>
+          <br />
+          <div class="w3-row-padding w3-padding-32" style="margin: 0 -16px;">
+            <iframe
+              src="https://coronavirus.jhu.edu/map.html"
+              width="800px"
+              height="500px"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- The Contact Section -->
+      <div
+        class="w3-container w3-content w3-padding-64"
+        style="max-width: 800px;"
+        id="contact"
+      >
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+        <p class="w3-opacity w3-center"><i> Drop a note or suggestions!</i></p>
+        <div class="w3-row w3-padding-32">
+          <div class="w3-col m6 w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker" style="width: 30px;"></i>IIIT SURAT<br />
+            <i class="fa fa-envelope" style="width: 30px;"> </i> Email:
+            ashutoshthakur_14@yahoo.com<br />
+          </div>
+          <div class="w3-col m6">
+            <form>
+              <div class="w3-row-padding" style="margin: 0 -16px 8px -16px;">
+                <div class="w3-half">
+                  <input
+                    class="w3-input w3-border"
+                    type="text"
+                    placeholder="Name"
+                    required
+                    name="Name"
+                  />
+                </div>
+                <div class="w3-half">
+                  <input
+                    class="w3-input w3-border"
+                    type="text"
+                    placeholder="Email"
+                    required
+                    name="Email"
+                  />
+                </div>
+              </div>
+              <input
+                class="w3-input w3-border"
+                type="text"
+                placeholder="Message"
+                required
+                name="Message"
+              />
+              <button
+                class="w3-button w3-black w3-section w3-right"
+                type="submit"
+              >
+                SEND
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Page Content -->
+    </div>
+
+    <!-- Image of location/map -->
+    <img
+      src="/w3images/map.jpg"
+      class="w3-image w3-greyscale-min"
+      style="width: 100%;"
+    />
+
+    <!-- Footer -->
+    <footer
+      class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge"
+    >
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <i class="fa fa-github w3-hover-opacity"></i>
+      <p class="w3-medium"><i>Created by </i> <b>TEAM MARCOS </b></p>
+    </footer>
+
+    <script>
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000);
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      var modal = document.getElementById("ticketModal");
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
